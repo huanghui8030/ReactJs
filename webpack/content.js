@@ -1,0 +1,1 @@
+module.exports = "我加入了一个webpack.config.js文件";

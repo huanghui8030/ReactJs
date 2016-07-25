@@ -1,9 +1,22 @@
 body{
 	background: #87b9ec;
-	font-size:18px;
+	font-size:24px;
 	color:#f1f1f1;
+	margin:0 auto;
+	width:500px;
+}
+.div1{
 	width:300px;
 	height:100px;
-	margin:0 auto;
-
+	background:url("../images/sao.png")
+}
+.div2{
+	width:300px;
+	height:100px;
+	background:url('../images/img_jpg.jpg');
+}
+.div3{
+	width:300px;
+	height:100px;
+	background:url('http://t1.chei.com.cn/chsi/images/2014/icon_index3.png');
 }

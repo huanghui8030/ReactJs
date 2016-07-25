@@ -45,8 +45,19 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	document.write(__webpack_require__(5));
+	__webpack_require__(7);
+	//require('http://t4.chei.com.cn/common/jquery/2.1.1/jquery.min.js');
+	document.write(__webpack_require__(9));
+	var img = document.createElement("img");
+	img.src = __webpack_require__(4);
+	document.body.appendChild(img);
 
+	//var jQuery = require('jquery');
+
+	$(function(){
+		alert(11);
+
+	})
 
 /***/ },
 /* 1 */
@@ -58,7 +69,7 @@
 	var content = __webpack_require__(2);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(4)(content, {});
+	var update = __webpack_require__(6)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -83,7 +94,7 @@
 
 
 	// module
-	exports.push([module.id, "body{\n\tbackground: #87b9ec;\n\tfont-size:18px;\n\tcolor:#f1f1f1;\n\twidth:300px;\n\theight:100px;\n\tmargin:0 auto;\n\n}", ""]);
+	exports.push([module.id, "body{\n\tbackground: #87b9ec;\n\tfont-size:24px;\n\tcolor:#f1f1f1;\n\tmargin:0 auto;\n\twidth:500px;\n}\n.div1{\n\twidth:300px;\n\theight:100px;\n\tbackground:url(" + __webpack_require__(4) + ")\n}\n.div2{\n\twidth:300px;\n\theight:100px;\n\tbackground:url(" + __webpack_require__(5) + ");\n}\n.div3{\n\twidth:300px;\n\theight:100px;\n\tbackground:url('http://t1.chei.com.cn/chsi/images/2014/icon_index3.png');\n}", ""]);
 
 	// exports
 
@@ -146,6 +157,18 @@
 
 /***/ },
 /* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./build/images/76ff4b07.sao.png";
+
+/***/ },
+/* 5 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./build/images/4cd0aeb8.img_jpg.jpg";
+
+/***/ },
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -397,7 +420,47 @@
 
 
 /***/ },
-/* 5 */
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(8);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(6)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./mainLess.less", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./mainLess.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "body {\n  background: #ccc;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 9 */
 /***/ function(module, exports) {
 
 	module.exports = "我加入了一个webpack.config.js文件";

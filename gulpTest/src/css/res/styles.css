@@ -1,0 +1,66 @@
+body {
+  background: green;
+}
+.div1 {
+  width: 200px;
+  display: block;
+  color: #cfa;
+  border: 1px solid #ccc;
+  background: url("../../images/img1.jpg?v=0fadecc") no-repeat 50% 50%;
+  height: 200px;
+}
+.div2 {
+  width: 200px;
+  border: 1px solid #ccc;
+  height: 100px;
+  background: url("https://t1.chei.com.cn/passport/images/login2014/xxw_center.jpg?v=1470292408526");
+  background-size: 100% 100%;
+}
+.div3 {
+  width: 200px;
+  height: 100px;
+  background: url("http://axvert.chsi.com.cn/img/1588483665.jpg?v=1470292408526");
+  background-size: 100% 100%;
+}
+body {
+  width: 800px;
+  background: #e1e1e1;
+  font-size: 14px;
+  margin: 0 auto;
+}
+.example {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background: -webkit-linear-gradient(top, white, black);
+  background: linear-gradient(to bottom, white, black);
+}
+.divP {
+  width: 100px;
+}
+.divP div {
+  width: 90px;
+}
+.divP div p {
+  width: 80px;
+}
+.divP div p a {
+  width: 70px;
+}
+.divP div p a:hover {
+  width: 60px;
+}
+#divImg {
+  background: #f1f1f1;
+}
+#divImg div {
+  width: 100px;
+  height: 100px;
+  background: #f4f4f4;
+}

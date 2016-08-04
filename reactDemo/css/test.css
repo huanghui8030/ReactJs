@@ -1,0 +1,16 @@
+body{
+	background: #f1f1f1;
+	font-size:16px;
+}
+.testDiv{
+	background:url(../images/xxw_center.jpg) no-repeat;
+	width:320px;
+	height:230px;
+	background-size: 100%;
+}
+.testDiv1{
+	background:url(http://axvert.chsi.com.cn/img/1665350684.jpg) no-repeat;
+	width:320px;
+	height:230px;
+	background-size: 100%;
+}

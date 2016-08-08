@@ -48,6 +48,10 @@
 - [gulp-watch](https://github.com/floatdrop/gulp-watch)：及时更改文件，执行gulp操作，不用手动执行
 - [gulp-asset-rev](https://www.npmjs.com/package/gulp-asset-rev)：加入版本号，修改下源码。让远程链接也可以修改版本号。
 - [gulp-clean](https://www.npmjs.com/package/gulp-clean)：删除目录。[参考](http://www.cnblogs.com/1wen/p/4586198.html)
+- [gulp-uncss](https://github.com/addyosmani/gulp-uncss-task) ：移除空的css元素，如果用less编译的话会自动删掉空的css元素，如果用到less则不需要改插件，因为less会自动把空的css给删除掉。
+- [gulp-markdown](https://github.com/sindresorhus/gulp-markdown)：将md文件转化为html文件。
+- [gulp.spritesmith](https://github.com/twolfson/gulp.spritesmith)：将多张图自动合成雪碧图。
+- gulp-css-spriter：将多张图自动合成雪碧图
 
 
 ## 3、卸载插件
@@ -174,6 +178,8 @@
 
   - gulp-livereload，不用刷新页面： `cnpm install gulp-livereload --save-dev`
 
+  - [gulp-csso](https://github.com/ben-eb/gulp-csso)，css属性合并： `cnpm install gulp-csso --save-dev` 没有效果
+
   - css语法检查：
 
     - 通过stylelint来检查css语法，做代码检测工作：
@@ -183,4 +189,14 @@
       ```
 
     - gulp-csslint，检查css语法：`cnpm install gulp-csslint --save-dev`，已测试检查不出来错误。
+
+- 添加js相关插件
+
+  - gulp-concat，js合并，cnpm install gulp-concat --save-dev
+  - gulp-uglify，js压缩，cnpm install gulp-uglify --save-dev
+  - gulp-jslint，js代码检验，cnpm install gulp-jslin t  --save-dev  
+
+- 添加images相关插件
+
+  - gulp-imagemin，图片压缩，`**cnpm install gulp-imagemin --save-dev**`
 

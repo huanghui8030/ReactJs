@@ -160,13 +160,6 @@ gulp.task('imgmin',function(){
       .pipe(gulp.dest(ArrAll.imgMin))
 });
 
-var markdown = require('gulp-markdown');
-
-gulp.task('testMd', function () {
-    return gulp.src('Gulp.md')
-        .pipe(markdown())
-        .pipe(gulp.dest('build'));
-});
 
 //html页面引用时加入版本号
 gulp.task('htmlRev',function() {

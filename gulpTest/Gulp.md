@@ -21,7 +21,7 @@
   ```js
   var gulp = require('gulp');
   gulp.task('default', function() {
-    // 将你的默认的任务代码放在这
+    // 将需要执行的任务代码放在这
   });
   ```
 
@@ -122,9 +122,11 @@
 
   - 可通过命令行直接生成该配置文件，```cnpm init```
 
+  - 如果本地已有该配置文件，则通过如下命令将node_modules记载到本项目中`npm install --save-dev`
+
 - 本地安装gulp插件
 
-  - 项目根目录下执行安装，```cnpm install --save-dev```
+  - 项目根目录下执行安装，```cnpm install --save-dev gulp```
   - 安装gulp-less，编译less文件，```cnpm install gulp-less --save-dev```
   - 安装gulp，```cnpm install gulp --save-dev```。全局安装了gulp，项目也安装了gulp，全局安装gulp是为了执行gulp任务，本地安装gulp则是为了调用gulp插件的功能。
 
@@ -139,15 +141,15 @@
     //导入工具包 require('node_modules里对应模块')
     var gulp = require('gulp'), //本地安装gulp所用到的地方
         less = require('gulp-less');
-     
     //定义一个testLess任务（自定义任务名称）
     gulp.task('testLess', function () {
         gulp.src('src/less/index.less') //该任务针对的文件
             .pipe(less()) //该任务调用的模块
             .pipe(gulp.dest('src/css')); //将会在src/css下生成index.css
     });
-     
-    gulp.task('default',['testLess', 'elseTask']); //定义默认任务 elseTask为其他任务，该示例没有定义elseTask任务
+    //定义默认任务 elseTask为其他任务，该示例没有定义elseTask任务
+    gulp.task('default',['testLess', 'elseTask']); 
+
      
     //gulp.task(name[, deps], fn) 定义任务  name：任务名称 deps：依赖任务名称 fn：回调函数
     //gulp.src(globs[, options]) 执行任务处理的文件  globs：处理的文件路径(字符串或者字符串数组) 
@@ -180,6 +182,8 @@
 
   - [gulp-csso](https://github.com/ben-eb/gulp-csso)，css属性合并： `cnpm install gulp-csso --save-dev` 没有效果
 
+  - gulp-concat-css，合并css文件
+
   - css语法检查：
 
     - 通过stylelint来检查css语法，做代码检测工作：
@@ -189,6 +193,8 @@
       ```
 
     - gulp-csslint，检查css语法：`cnpm install gulp-csslint --save-dev`，已测试检查不出来错误。
+
+  - ​
 
 - 添加js相关插件
 

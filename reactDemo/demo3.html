@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>获取真实DOM节点</title>
-  <script src="../js/react.js"></script>
-  <script src="../js/react-dom.js"></script>
-  <script src="../js/browser.min.js"></script>
+  <script src="js/common/react.js"></script>
+  <script src="js/common/react-dom.js"></script>
+  <script src="js/common/browser.min.js"></script>
 </head>
 <body>
   <div id="div1"></div>
@@ -14,9 +14,9 @@
  * 组件 MyComponent 的子节点有一个文本输入框，用于获取用户的输入。这时就必须获取真实的 DOM 节点，虚拟 DOM 是拿不到用户输入的。为了做到这一点，文本输入框必须有一个 ref 属性，然后 this.refs.[refName] 就会返回这个真实的 DOM 节点。
  */
 var TestCom = React.createClass({
-	handleClick:function(){
+  handleClick:function(){
 		this.refs.myTextInput.focus();
-    alert('input获取了焦点');
+        alert('click，input获取焦点！');
 	},
   render:function(){
     return(

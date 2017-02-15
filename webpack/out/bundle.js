@@ -1,1 +1,76 @@
-!function(e){function n(t){if(r[t])return r[t].exports;var o=r[t]={i:t,l:!1,exports:{}};return e[t].call(o.exports,o,o.exports,n),o.l=!0,o.exports}var t=window.webpackJsonp;window.webpackJsonp=function(n,r,u){for(var c,i,a=0,l=[];a<n.length;a++)i=n[a],o[i]&&l.push(o[i][0]),o[i]=0;for(c in r)Object.prototype.hasOwnProperty.call(r,c)&&(e[c]=r[c]);for(t&&t(n,r,u);l.length;)l.shift()()};var r={},o={1:0};return n.e=function(e){function t(){u.onerror=u.onload=null,clearTimeout(c);var n=o[e];0!==n&&(n&&n[1](new Error("Loading chunk "+e+" failed.")),o[e]=void 0)}if(0===o[e])return Promise.resolve();if(o[e])return o[e][2];var r=document.getElementsByTagName("head")[0],u=document.createElement("script");u.type="text/javascript",u.charset="utf-8",u.async=!0,u.timeout=12e4,n.nc&&u.setAttribute("nonce",n.nc),u.src=n.p+""+e+".bundle.js";var c=setTimeout(t,12e4);u.onerror=u.onload=t;var i=new Promise(function(n,t){o[e]=[n,t]});return o[e][2]=i,r.appendChild(u),i},n.m=e,n.c=r,n.i=function(e){return e},n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{configurable:!1,enumerable:!0,get:r})},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,n){return Object.prototype.hasOwnProperty.call(e,n)},n.p="./out/",n.oe=function(e){throw console.error(e),e},n(n.s=1)}([function(e,n,t){t.e(0).then(function(){var e=[t(2)];(function(){alert("大家好！")}).apply(null,e)}).catch(t.oe)},function(e,n,t){t(0)}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+
+
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+
+/******/ 	// identity function for calling harmony imports with the correct context
+/******/ 	__webpack_require__.i = function(value) { return value; };
+
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "./out/";
+
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed: Error: Cannot find module 'babel-core'\n    at Function.Module._resolveFilename (module.js:325:15)\n    at Function.Module._load (module.js:276:25)\n    at Module.require (module.js:353:17)\n    at require (internal/module.js:12:17)\n    at Object.<anonymous> (/Users/huanghui/Documents/ReactJs/webpack/node_modules/.npminstall/babel-loader/6.2.10/babel-loader/lib/index.js:6:13)\n    at Module._compile (module.js:409:26)\n    at Object.Module._extensions..js (module.js:416:10)\n    at Module.load (module.js:343:32)\n    at Function.Module._load (module.js:300:12)\n    at Module.require (module.js:353:17)\n    at require (internal/module.js:12:17)\n    at loadLoader (/Users/huanghui/Documents/ReactJs/webpack/node_modules/.npminstall/loader-runner/2.3.0/loader-runner/lib/loadLoader.js:13:17)\n    at iteratePitchingLoaders (/Users/huanghui/Documents/ReactJs/webpack/node_modules/.npminstall/loader-runner/2.3.0/loader-runner/lib/LoaderRunner.js:169:2)\n    at runLoaders (/Users/huanghui/Documents/ReactJs/webpack/node_modules/.npminstall/loader-runner/2.3.0/loader-runner/lib/LoaderRunner.js:362:2)\n    at NormalModule.doBuild (/Users/huanghui/Documents/ReactJs/webpack/node_modules/.npminstall/webpack/2.2.1/webpack/lib/NormalModule.js:129:2)\n    at NormalModule.build (/Users/huanghui/Documents/ReactJs/webpack/node_modules/.npminstall/webpack/2.2.1/webpack/lib/NormalModule.js:180:15)\n    at Compilation.buildModule (/Users/huanghui/Documents/ReactJs/webpack/node_modules/.npminstall/webpack/2.2.1/webpack/lib/Compilation.js:142:10)\n    at /Users/huanghui/Documents/ReactJs/webpack/node_modules/.npminstall/webpack/2.2.1/webpack/lib/Compilation.js:424:9\n    at /Users/huanghui/Documents/ReactJs/webpack/node_modules/.npminstall/webpack/2.2.1/webpack/lib/NormalModuleFactory.js:242:4\n    at /Users/huanghui/Documents/ReactJs/webpack/node_modules/.npminstall/webpack/2.2.1/webpack/lib/NormalModuleFactory.js:93:13\n    at /Users/huanghui/Documents/ReactJs/webpack/node_modules/.npminstall/tapable/0.2.6/tapable/lib/Tapable.js:204:11\n    at NormalModuleFactory.<anonymous> (/Users/huanghui/Documents/ReactJs/webpack/node_modules/.npminstall/webpack/2.2.1/webpack/lib/CompatibilityPlugin.js:52:5)\n    at NormalModuleFactory.applyPluginsAsyncWaterfall (/Users/huanghui/Documents/ReactJs/webpack/node_modules/.npminstall/tapable/0.2.6/tapable/lib/Tapable.js:208:13)\n    at onDoneResolving (/Users/huanghui/Documents/ReactJs/webpack/node_modules/.npminstall/webpack/2.2.1/webpack/lib/NormalModuleFactory.js:68:11)\n    at onDoneResolving (/Users/huanghui/Documents/ReactJs/webpack/node_modules/.npminstall/webpack/2.2.1/webpack/lib/NormalModuleFactory.js:189:6)\n    at nextTickCallbackWith0Args (node.js:420:9)\n    at process._tickCallback (node.js:349:13)");
+
+/***/ })
+/******/ ]);

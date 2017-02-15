@@ -1,0 +1,21 @@
+{
+  "devDependencies": {
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
+  },
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "webpack入门学习",
+  "main": "index.js",
+  "dependencies": {
+    "webpack": "^2.2.1"
+  },
+  "scripts": {
+    "start": "webpack"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "huanghui8030@qq.com",
+  "license": "ISC"
+}

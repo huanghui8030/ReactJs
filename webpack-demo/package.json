@@ -1,21 +1,22 @@
 {
-  "devDependencies": {
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.3.0"
-  },
   "name": "webpack-demo",
   "version": "1.0.0",
   "description": "webpack入门学习",
-  "main": "index.js",
+  "main": "bundle.js",
   "dependencies": {
     "webpack": "^2.2.1"
   },
   "scripts": {
-    "start": "webpack"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "webpack"
   ],
   "author": "huanghui8030@qq.com",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.21.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.2"
+  }
 }

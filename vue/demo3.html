@@ -5,19 +5,20 @@
     <title>vue构造器</title>
 </head>
 <body>
- <div id="demo">{{ fullName }}</div>
- 
-<div id="example1">
-  {{ message.split('').reverse().join('') }}
-</div>
-<div id="example2">
-  <p>一组信息: "{{ message }}"</p>
-  <p>反过来的一组信息: "{{ reversedMessage }}"</p>
-</div>
-<div id="example3">
-  <p>一组信息: "{{ message }}"</p>
-  <p>另一种方法：{{ reversedMessage() }}</p>
-</div>
+    <div id="demo">{{ fullName }}</div>
+    <!--  计算属性 -->
+    <div id="example1">
+      {{ message.split('').reverse().join('') }}
+    </div>
+    <!-- 基础例子 -->
+    <div id="example2">
+      <p>一组信息: "{{ message }}"</p>
+      <p>反过来的一组信息: "{{ reversedMessage }}"</p>
+    </div>
+    <div id="example3">
+      <p>一组信息: "{{ message }}"</p>
+      <p>另一种方法：{{ reversedMessage() }}</p>
+    </div>
 
 
 <script src="js/vue.js"></script> 

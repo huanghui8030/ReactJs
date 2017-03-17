@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AntDesign</title>
+<style>
+#container {
+  margin: 24px;
+}
+.version {
+  margin-bottom: 24px;
+}
+</style>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+    <script>
+    var mountNode = document.getElementById('container');
+
+const { LocaleProvider, DatePicker, locales, version } = antd;
+moment.locale('en');
+
+ReactDOM.render(
+  <div>
+    <p className="version">antd version: {version}</p>
+    <LocaleProvider locale={locales.en_US}>
+      <DatePicker defaultValue={moment()} />   
+    </LocaleProvider>
+  </div>
+, mountNode);
+    </script> 
+     
+</body>
+</html>

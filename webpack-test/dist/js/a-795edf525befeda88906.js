@@ -1,4 +1,3 @@
-/*! 作者：黄卉 */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -7,9 +6,9 @@
 /******/ 	function __webpack_require__(moduleId) {
 /******/
 /******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
+/******/ 		if(installedModules[moduleId]) {
 /******/ 			return installedModules[moduleId].exports;
-/******/
+/******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
@@ -69,12 +68,12 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-(function webpackMissingModule() { throw new Error("Cannot find module \"./entry.js\""); }());
-(function webpackMissingModule() { throw new Error("Cannot find module \"/Users/huanghui/Documents/ReactJs/webpack-demo/hello.js\""); }());
-(function webpackMissingModule() { throw new Error("Cannot find module \"hello.bulid.js\""); }());
-
+function a(){
+    alert('a');
+    alert('b');
+}
 
 /***/ })
 /******/ ]);

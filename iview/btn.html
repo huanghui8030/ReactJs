@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ivew-test</title>
+ <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
+    <script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
+    <script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <i-button @click="show">Click me!</i-button>
+    <Modal v-model="visible" title="Welcome">欢迎使用 iView</Modal>
+</div>
+<div id = 'app2'>
+    <template>
+     <i-button type="primary" @click="modal1 = true">显示对话框</i-button>
+    <Modal
+        v-model="modal1"
+        title="普通的Modal对话框标题"
+        @on-ok="ok"
+        @on-cancel="cancel">
+        <p>对话框内容</p>
+        <p>对话框内容</p>
+        <p>对话框内容</p>
+    </Modal>
+    </template>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            visible: false
+        },
+        methods: {
+            show: function () {
+                this.visible = true;
+            }
+        }
+    })
+    new Vue({
+      el: '#app2',
+       data () {
+            return {
+                modal1: false
+            }
+        },
+        methods: {
+            ok () {
+                //this.$Message.info('点击了确定');
+            },
+            cancel () {
+                //this.$Message.info('点击了取消');
+            }
+        }
+    })
+  </script>
+</body>
+</html>

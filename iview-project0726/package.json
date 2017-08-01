@@ -8,7 +8,12 @@
     "dev": "webpack-dev-server --content-base ./ --open --inline --hot --compress --history-api-fallback --config webpack.dev.config.js",
     "build": "webpack --progress --hide-modules --config webpack.prod.config.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iview/iview-project.git"
+  },
+  "author": "Aresn",
+  "license": "MIT",
   "dependencies": {
     "vue": "^2.2.6",
     "vue-router": "^2.2.1",
@@ -39,5 +44,9 @@
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.1",
     "webpack-merge": "^3.0.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/iview/iview-project/issues"
+  },
+  "homepage": "https://www.iviewui.com"
 }

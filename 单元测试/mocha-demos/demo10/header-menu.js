@@ -108,7 +108,7 @@ function getFirstIndex(id){
     }
     return 0;
 }
-module.exports = getFirstIndex;
+
 /**获取二级菜单选中的序列号
  * @param  {string} url 当前页面的url截取值
  * @param  {int}   n    一级菜单选中的序列号

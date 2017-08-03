@@ -28,15 +28,15 @@ describe('获取一级菜单序列号getFirstIndex方法', function() {
     });
 });
 
-describe('超时测试selectMenu()', function() {
-  it('测试应该 4000 毫秒后结束', function(done) {
-    var x = 'myd';
-    var f = function() {
-      x = 'gdxw';
-      expect(getFirstIndex(x)).to.be.not.ok;
-      done();
-    };
-    setTimeout(f, 3000);
-  });
-});
+
+
+
+
+
+
+
+
+
+
+
 

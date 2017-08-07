@@ -217,8 +217,8 @@ function setHref(){
  */
 function getHref(firstIndex,secondIndex){
     var  href = HerfJson[firstIndex].navSecond[secondIndex].url[0];
-    href += href.indexOf('?')>-1 ? '&':'?';
-    href += "trnd="+new Date().getTime();
+    //href += href.indexOf('?')>-1 ? '&':'?';
+    //href += "trnd="+new Date().getTime();
     if(typeof(SpathMy) == "undefined"){
         SpathMy = 'https://my.chsi.com.cn/archive/';
     }

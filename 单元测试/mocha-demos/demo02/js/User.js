@@ -6,16 +6,15 @@ var stubDB = {};
  * @param name 用户名称
  * @constructor
  */
-function User( name ) {
-}
+function User(name) {}
 
 /**
  * 保存用户.
  *
  * @param name 待保存的用户名称
  */
-User.save = function ( name ) {
-    stubDB[ name ] = name;
+User.save = function(name) {
+    stubDB[name] = name;
 };
 
 /**
@@ -23,8 +22,8 @@ User.save = function ( name ) {
  *
  * @param name 待删除的用户名称
  */
-User.delete = function ( name ) {
-    delete stubDB[ name ];
+User.delete = function(name) {
+    delete stubDB[name];
 };
 
 /**
@@ -33,8 +32,8 @@ User.delete = function ( name ) {
  * @param name 待检查的用户名称
  * @returns {boolean} 如果包含则返回 true, 否则返回 false
  */
-User.contains = function ( name ) {
-    return stubDB[ name ] != null;
+User.contains = function(name) {
+    return stubDB[name] != null;
 };
 
 // Export the User class.

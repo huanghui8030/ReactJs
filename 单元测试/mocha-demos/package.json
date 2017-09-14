@@ -10,7 +10,7 @@
     "testing",
     "Mocha"
   ],
-  "author": "",
+  "author": "huangh#chsi.com.cn",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.25.0",

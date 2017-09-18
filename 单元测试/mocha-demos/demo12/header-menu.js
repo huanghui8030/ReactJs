@@ -36,8 +36,9 @@ var HerfJson = [{'url':'gdjy','name':'高等教育信息',
  * @return {null}  返回空
  */
 function selectMenu() {
-    var requestUrl = window.location.href,newRul='';
-    var whIndex = requestUrl.lastIndexOf('?');
+    var requestUrl = window.location.href,
+        newRul='',
+        whIndex = requestUrl.lastIndexOf('?');
     if(whIndex>-1){
         newRul  = requestUrl.substring(0,whIndex);
     }else{
@@ -75,22 +76,24 @@ function selectMenu() {
  */
 function setCurSelect(id , url){
     $('.homePage-nav a').removeClass('active');
-    var url = url || '',id = id||'';
-    var $firstNav = $('#nav-first');
+    var url = url || '',
+        id = id||'',
+        $firstNav = $('#nav-first'),
+        newUrl = '' ,
+        secondIndex = 0 ,
+        firstIndex = getFirstIndex(id) ,  ////获取一级菜单序列号
+        $first = $firstNav.find('dl:eq('+firstIndex+')'),
+        $sbuUl = null;
     $firstNav.find('dt').removeClass('active').find('.sanjiao').hide();
-    //获取一级菜单序列号
-    var firstIndex = getFirstIndex(id);
-    var $first = $firstNav.find('dl:eq('+firstIndex+')');
     $first.addClass('active').find('.sanjiao').show();
-    var $sbuUl = $('#nav-second').find('ul');
+    $sbuUl = $('#nav-second').find('ul');
     $sbuUl.hide();
-    var newUrl = '';
     if(url.indexOf('/')==url.lastIndexOf('/')){//只有一个“/”
         newUrl = url;
     }else{
         newUrl = url.substring(0,url.lastIndexOf('/'));
     }
-    var secondIndex = getSecondIndex(newUrl,firstIndex)||0;
+    secondIndex = getSecondIndex(newUrl,firstIndex)||0;
     $sbuUl.eq(firstIndex).show().find('li:eq('+secondIndex+')').addClass('active');     
 }
 /**获取一级菜单序列号
@@ -100,7 +103,6 @@ function setCurSelect(id , url){
  * @date   2016.10.27
  */
 function getFirstIndex(id){
-    var length  = HerfJson.length;
     for(var i=0,j=HerfJson.length;i<j;i++){
         if(HerfJson[i].url.indexOf(id)!=-1){
             return i;
@@ -117,11 +119,11 @@ function getFirstIndex(id){
  * @date   2016.10.18
  */
 function getSecondIndex (url,n){
-    var n = n ||0;
-    var second = HerfJson[n].navSecond;
+    var n = n ||0 , 
+        second = HerfJson[n].navSecond;
     for(var i=0;i<second.length;i++){
         var urlArr = second[i].url;
-        for(var j=0;j<urlArr.length;j++){
+        for(var j=0,k = urlArr.length ; j<k ;j++){
             if(url.indexOf(urlArr[j])!=-1){
                 return i;
             }
@@ -137,16 +139,16 @@ function getSecondIndex (url,n){
  * @date   2016.10.18
  */
 function supNavHover(){
-    var $clone = $('#nav-second ul').clone() || '';
-    var $supNav = $('#nav-first');
-    var $supDetial = $supNav.find('dd') || '';
+    var $clone = $('#nav-second ul').clone() || '',
+        $supNav = $('#nav-first'),
+        $supDetial = $supNav.find('dd') || '';
     if($supDetial!=''){
         //克隆二级菜单数据给hover中的显示菜单
         for(i=0,j=$supDetial.length;i<j;i++){
             //高等教育信息，图像校对和学籍信息分开显示
             if(i==0){
-                var $gdjy = $clone.eq(i);
-                var $li =  $gdjy.find('li:eq(0)');
+                var $gdjy = $clone.eq(i),
+                    $li =  $gdjy.find('li:eq(0)');
                 $li.html('图像校对');
                 var $newli = $li.clone();
                 $newli.html('学籍信息');
@@ -157,7 +159,7 @@ function supNavHover(){
         //设置hover菜单中ul显示，但是dd是隐藏，所以hover菜单默认不显示
         $supDetial.find('ul').show();
     }
-    //一级菜单鼠标以上效果
+    //一级菜单鼠标移上效果
     $("#nav-first").mouseover(function(){
        $(this).find('dd').show();
        $('.header-nav-bg').show();
@@ -165,15 +167,13 @@ function supNavHover(){
        $(this).find('dd').hide();
        $('.header-nav-bg').hide();
     });
-    //个人中心鼠标以上效果
+    //个人中心鼠标移上效果
     $(".nav-userinfo").mouseover(function(){
-        var $btngroup = $(this).find('.btn-group');
-        $btngroup.addClass('open')
+        $(this).find('.btn-group').addClass('open')
                 .find('.caret').addClass('animated flip')
 
     }).mouseout(function(){
-        var $btngroup = $(this).find('.btn-group');
-        $btngroup.removeClass('open')
+        $(this).find('.btn-group').removeClass('open')
                 .find('.caret').removeClass('animated flip');
     });
 }    
@@ -184,9 +184,9 @@ function supNavHover(){
  */
 function setHref(){
     $('.sub_nav_mian li').click(function(){
-        var $this = $(this);
-        var liIndex = $this.index();
-        var $parent = $this.parents('dl');
+        var $this = $(this),
+            liIndex = $this.index(),
+            $parent = $this.parents('dl');
         if($parent.length <= 0){
             $parent = $this.parent('ul');
         }
@@ -203,8 +203,7 @@ function setHref(){
         }
     });
     $('#nav-first dt').click(function(){
-        var $this = $(this);
-        var dlIndex = $this.parent('dl').prevAll('dl').length ||0;
+        var dlIndex = $(this).parent('dl').prevAll('dl').length ||0;
          if(dlIndex < 5){   
             window.location.href = getHref(dlIndex,0);
         }
@@ -217,8 +216,6 @@ function setHref(){
  */
 function getHref(firstIndex,secondIndex){
     var  href = HerfJson[firstIndex].navSecond[secondIndex].url[0];
-    //href += href.indexOf('?')>-1 ? '&':'?';
-    //href += "trnd="+new Date().getTime();
     if(typeof(SpathMy) == "undefined"){
         SpathMy = 'https://my.chsi.com.cn/archive/';
     }

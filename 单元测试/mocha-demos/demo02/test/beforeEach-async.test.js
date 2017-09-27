@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
 
-describe("beforeEach-async异步示例", function(){
+describe("beforeEach-async异步示例-beforeEach-async.test.js", function(){
     var foo = false;
 
     beforeEach(function(done){

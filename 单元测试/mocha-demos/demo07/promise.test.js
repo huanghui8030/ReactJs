@@ -40,7 +40,7 @@ describe('promise.test.js - 异步测试', function() {
     });
 
     //返回403，服务端限制
-    it.skip('测试post方法', function(done) {
+    it('测试post方法', function(done) {
         request
             .post("http://kl.chdi.com.cn/search/allSearch.action?keywords='身份证重复'")
             .set('dataType', 'jsonp')

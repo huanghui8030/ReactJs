@@ -7,7 +7,7 @@ function add() {
     }, 0);
 }
 
-describe('test/add.test.js--数组和add()111', function() {
+describe('test/add.test.js--1111数组和add()', function() {
     var tests = [
         {args: [1, 2],       expected: 3},
         {args: [1, 2, 3],    expected: 6},

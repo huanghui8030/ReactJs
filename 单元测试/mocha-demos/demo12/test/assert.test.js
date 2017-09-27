@@ -16,7 +16,7 @@ describe('获取二级菜单选中的序列号getSecondIndex方法', function() 
     var tests = [
         {first:'gjhz',index: 0, url:'gjhz/index.action' },
         {first:'gjhz',index: 1, url:'gjhz/utf/index.action' },
-        {first:'gjhz',index: 0, url:'gjhz/apply.action' },
+        {first:'gjhz',index: 0, url:'gjhz/apply.action' }
     ];
 
     tests.forEach(function(test) {

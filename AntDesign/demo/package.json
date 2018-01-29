@@ -1,5 +1,8 @@
 {
   "devDependencies": {
-    "antd": "^2.8.1"
+    "react-dom": "latest",
+    "react": "latest",
+    "moment": "2",
+    "antd": "latest"
   }
 }

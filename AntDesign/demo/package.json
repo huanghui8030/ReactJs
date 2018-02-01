@@ -2,7 +2,7 @@
   "devDependencies": {
     "react-dom": "latest",
     "react": "latest",
-    "moment": "2",
+    "moment": "^2.19.3",
     "antd": "latest"
   }
 }
